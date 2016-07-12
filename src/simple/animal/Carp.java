@@ -8,7 +8,7 @@ import general.Predator;
 
 public class Carp extends FishOmnivorous implements Predator {
 
-	public Carp(int weight, int age, Sex sex, int lenght, int speed, Fertilization fertilization, int eatFood) {
+	public Carp(double weight, int age, Sex sex, int lenght, int speed, Fertilization fertilization, int eatFood) {
 		super(weight, age, sex, lenght, speed, fertilization, eatFood);
 	}
 
@@ -29,7 +29,7 @@ public class Carp extends FishOmnivorous implements Predator {
 	public boolean canKill(Animal animal) {
 		double weight = animal.getWeight() / getWeight();
 		double speed = getSpeed() - animal.getSpeed();
-		if (animal instanceof Fish || animal instanceof Insect && speed > 0 && weight > 3)
+		if ((animal instanceof Fish || animal instanceof Insect) && speed >= 0 && weight < 3)
 			return true;
 		else
 			return false;

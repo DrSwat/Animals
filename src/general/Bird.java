@@ -6,7 +6,7 @@ public abstract class Bird extends Animal {
 	private int rangeOfFlight;
 	private boolean canFlight;
 
-	public Bird(int weight, int age, Sex sex, int growth, int wingspan, int rangeOfFlight, boolean canFlight, int speed) {
+	public Bird(double weight, int age, Sex sex, int growth, int wingspan, int rangeOfFlight, boolean canFlight, int speed) {
 		super(weight, age, sex, speed);
 		this.growth = growth;
 		this.wingspan = wingspan;

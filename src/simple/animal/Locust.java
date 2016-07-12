@@ -6,7 +6,7 @@ import general.Run;
 
 public class Locust extends InsectHerbivorous implements Run, JustEat {
 
-	public Locust(int weight, int age, Sex sex, int quantityLegs, Mouth mouth, int speed) {
+	public Locust(double weight, int age, Sex sex, int quantityLegs, Mouth mouth, int speed) {
 		super(weight, age, sex, quantityLegs, mouth, speed);
 	}
 

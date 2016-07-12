@@ -8,13 +8,12 @@ import general.Predator;
 
 public class Magpie extends BirdOmnivorous implements Predator, JustEat {
 
-	public Magpie(int weight, int age, Sex sex, int growth, int wingspan, int rangeOfFlight, boolean canFlight,
+	public Magpie(double weight, int age, Sex sex, int growth, int wingspan, int rangeOfFlight, boolean canFlight,
 			int eatFood, int speed) {
 		super(weight, age, sex, growth, wingspan, rangeOfFlight, canFlight, eatFood, speed);
 	}
 
 	
-
 	@Override
 	public boolean eat() {
 		int i = (int) (Math.random() * 2);
@@ -30,7 +29,7 @@ public class Magpie extends BirdOmnivorous implements Predator, JustEat {
 	public boolean canKill(Animal animal) {
 		double weight = animal.getWeight() / getWeight();
 		double speed = getSpeed() - animal.getSpeed();
-		if (animal instanceof Insect && speed > 0 && weight > 3)
+		if (animal instanceof Insect && speed >= 0 && weight < 3)
 			return true;
 		else
 			return false;		
@@ -40,7 +39,8 @@ public class Magpie extends BirdOmnivorous implements Predator, JustEat {
 
 	@Override
 	public void kill(Animal animal) {
-		setWeight((getWeight() + (animal.getWeight() * .004)));		
+		setWeight((getWeight() + (animal.getWeight() * .00004)));
+		
 	}
 
 	

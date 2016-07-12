@@ -5,7 +5,7 @@ import general.Run;
 
 public class Quail extends BirdGranivorous implements Run {
 
-	public Quail(int weight, int age, Sex sex, int growth, int wingspan, int rangeOfFlight, boolean canFlight,
+	public Quail(double weight, int age, Sex sex, int growth, int wingspan, int rangeOfFlight, boolean canFlight,
 			int eatGrown, int speed) {
 		super(weight, age, sex, growth, wingspan, rangeOfFlight, canFlight, eatGrown, speed);
 	}

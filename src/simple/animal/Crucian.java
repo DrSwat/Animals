@@ -4,7 +4,7 @@ import general.FishOmnivorous;
 
 public class Crucian extends FishOmnivorous {
 
-	public Crucian(int weight, int age, Sex sex, int lenght, int speed, Fertilization fertilization, int eatFood) {
+	public Crucian(double weight, int age, Sex sex, int lenght, int speed, Fertilization fertilization, int eatFood) {
 		super(weight, age, sex, lenght, speed, fertilization, eatFood);
 	}
 

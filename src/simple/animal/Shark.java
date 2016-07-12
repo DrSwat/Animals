@@ -9,7 +9,7 @@ import general.Predator;
 
 public class Shark extends FishCarnivorous implements Predator {
 
-	public Shark(int weight, int lifetime, Sex sex, int lenght, int speed, Fertilization fertilization,
+	public Shark(double weight, int lifetime, Sex sex, int lenght, int speed, Fertilization fertilization,
 			int numberOfTeeth) {
 		super(weight, lifetime, sex, lenght, speed, fertilization, numberOfTeeth);
 
@@ -32,7 +32,7 @@ public class Shark extends FishCarnivorous implements Predator {
 	public boolean canKill(Animal animal) {
 		double weight = animal.getWeight() / getWeight();
 		double speed = getSpeed() - animal.getSpeed();
-		if (animal instanceof Mammal || animal instanceof Bird || animal instanceof Fish && speed > 0 && weight > 3)
+		if ((animal instanceof Mammal || animal instanceof Bird || animal instanceof Fish) && speed >= 0 && weight < 3)
 			return true;
 		else
 			return false;		

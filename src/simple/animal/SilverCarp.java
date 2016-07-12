@@ -5,7 +5,7 @@ import general.JustEat;
 
 public class SilverCarp extends FishHerbivorous implements JustEat {
 
-	public SilverCarp(int weight, int age, Sex sex, int lenght, int speed, Fertilization fertilization, int seaweed) {
+	public SilverCarp(double weight, int age, Sex sex, int lenght, int speed, Fertilization fertilization, int seaweed) {
 		super(weight, age, sex, lenght, speed, fertilization, seaweed);
 	}
 

@@ -7,7 +7,7 @@ import general.Insect;
 
 public class Catfish extends FishCarnivorous {
 
-	public Catfish(int weight, int lifetime, Sex sex, int lenght, int speed, Fertilization fertilization,
+	public Catfish(double weight, int lifetime, Sex sex, int lenght, int speed, Fertilization fertilization,
 			int numberOfTeeth) {
 		super(weight, lifetime, sex, lenght, speed, fertilization, numberOfTeeth);
 
@@ -34,7 +34,7 @@ public class Catfish extends FishCarnivorous {
 	public boolean canKill(Animal animal) {
 		double weight = animal.getWeight() / getWeight();
 		double speed = getSpeed() - animal.getSpeed();
-		if (animal instanceof Fish || animal instanceof Insect && speed > 0 && weight > 3)
+		if ((animal instanceof Fish || animal instanceof Insect) && speed >= 0 && weight < 3)
 			return true;
 		else
 			return false;

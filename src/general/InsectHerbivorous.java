@@ -7,7 +7,7 @@ public abstract class InsectHerbivorous extends Insect implements Run {
 
 	private Mouth mouth;
 
-	public InsectHerbivorous(int weight, int age, Sex sex, int quantityLegs, Mouth mouth, int speed) {
+	public InsectHerbivorous(double weight, int age, Sex sex, int quantityLegs, Mouth mouth, int speed) {
 		super(weight, age, sex, quantityLegs, speed);
 		this.mouth = mouth;
 	}

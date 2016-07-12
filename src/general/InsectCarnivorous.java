@@ -7,7 +7,7 @@ public abstract class InsectCarnivorous extends Insect implements Predator {
 
 	private Weapon weapon;
 
-	public InsectCarnivorous(int weight, int age, Sex sex, int quantityLegs, Weapon weapon, int speed) {
+	public InsectCarnivorous(double weight, int age, Sex sex, int quantityLegs, Weapon weapon, int speed) {
 		super(weight, age, sex, quantityLegs, speed);
 		this.weapon = weapon;
 	}

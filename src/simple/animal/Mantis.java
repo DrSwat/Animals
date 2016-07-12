@@ -9,7 +9,7 @@ import general.Predator;
 
 public class Mantis extends InsectCarnivorous implements Predator {
 
-	public Mantis(int weight, int age, Sex sex, int quantityLegs, Weapon weapon, int speed) {
+	public Mantis(double weight, int age, Sex sex, int quantityLegs, Weapon weapon, int speed) {
 		super(weight, age, sex, quantityLegs, weapon, speed);
 	}
 
@@ -26,7 +26,7 @@ public class Mantis extends InsectCarnivorous implements Predator {
 	public boolean canKill(Animal animal) {
 		double weight = animal.getWeight() / getWeight();
 		double speed = getSpeed() - animal.getSpeed();
-		if (animal instanceof Mammal || animal instanceof Bird || animal instanceof Insect && speed > 0 && weight > 3)
+		if ((animal instanceof Mammal || animal instanceof Bird || animal instanceof Insect) && speed >= 0 && weight < 3)
 			return true;
 		else
 			return false;		

@@ -10,7 +10,7 @@ public abstract class Animal {
 	private Sex sex;
 	private int speed;
 
-	public Animal(int weight, int age, Sex sex, int speed) {
+	public Animal(double weight, int age, Sex sex, int speed) {
 		super();
 		this.weight = weight;
 		this.age = age;

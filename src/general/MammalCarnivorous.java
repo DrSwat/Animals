@@ -3,7 +3,7 @@ package general;
 public abstract class MammalCarnivorous extends Mammal implements Predator {
 	int quantityOfTeeth;
 
-	public MammalCarnivorous(int weight, int lifetime, Sex sex, int height, int lenght, int speed,
+	public MammalCarnivorous(double weight, int lifetime, Sex sex, int height, int lenght, int speed,
 			int quantityOfTeeth) {
 		super(weight, lifetime, sex, height, lenght, speed);
 		this.quantityOfTeeth = quantityOfTeeth;

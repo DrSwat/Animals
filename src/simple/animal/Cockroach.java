@@ -5,7 +5,7 @@ import general.JustEat;
 
 public class Cockroach extends InsectOmnivorous implements JustEat {
 
-	public Cockroach(int weight, int age, Sex sex, int quantityLegs, int range, int speed) {
+	public Cockroach(double weight, int age, Sex sex, int quantityLegs, int range, int speed) {
 		super(weight, age, sex, quantityLegs, range, speed);
 	}
 

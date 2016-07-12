@@ -3,7 +3,7 @@ package general;
 public abstract class FishHerbivorous extends Fish implements Run {
 	private int seaweed;
 
-	public FishHerbivorous(int weight, int age, Sex sex, int lenght, int speed, Fertilization fertilization,
+	public FishHerbivorous(double weight, int age, Sex sex, int lenght, int speed, Fertilization fertilization,
 			int seaweed) {
 		super(weight, age, sex, lenght, speed, fertilization);
 		this.seaweed = seaweed;

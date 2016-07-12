@@ -3,7 +3,7 @@ package general;
 public abstract class ReptileCarnivorous extends Animal implements Predator {
 	boolean hibernation;
 
-	public ReptileCarnivorous(int weight, int lifetime, Sex sex, boolean hibernation, int speed) {
+	public ReptileCarnivorous(double weight, int lifetime, Sex sex, boolean hibernation, int speed) {
 		super(weight, lifetime, sex, speed);
 		this.hibernation = hibernation;
 	}

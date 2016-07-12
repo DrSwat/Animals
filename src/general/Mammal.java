@@ -5,7 +5,7 @@ public abstract class Mammal extends Animal {
 	private int height;
 	private int lenght;
 
-	public Mammal(int weight, int age, Sex sex, int height, int lenght, int speed) {
+	public Mammal(double weight, int age, Sex sex, int height, int lenght, int speed) {
 		super(weight, age, sex, speed);
 		this.height = height;
 		this.lenght = lenght;

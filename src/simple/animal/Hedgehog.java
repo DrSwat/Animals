@@ -4,7 +4,7 @@ import general.MammalInsectivorous;
 
 public class Hedgehog extends MammalInsectivorous {
 
-	public Hedgehog(int weight, int age, Sex sex, int height, int lenght, int speed, int mouthparts) {
+	public Hedgehog(double weight, int age, Sex sex, int height, int lenght, int speed, int mouthparts) {
 		super(weight, age, sex, height, lenght, speed, mouthparts);
 	}
 

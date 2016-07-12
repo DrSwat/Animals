@@ -6,7 +6,7 @@ import general.Run;
 
 public class Sparrow extends BirdGranivorous implements Run {
 
-	public Sparrow(int weight, int age, Sex sex, int growth, int wingspan, int rangeOfFlight, boolean canFlight,
+	public Sparrow(double weight, int age, Sex sex, int growth, int wingspan, int rangeOfFlight, boolean canFlight,
 			int eatGrown, int speed) {
 		super(weight, age, sex, growth, wingspan, rangeOfFlight, canFlight, eatGrown, speed);
 	}

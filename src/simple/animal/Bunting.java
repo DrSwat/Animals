@@ -5,7 +5,7 @@ import general.Run;
 
 public class Bunting extends BirdGranivorous implements Run {
 
-	public Bunting(int weight, int age, Sex sex, int growth, int wingspan, int rangeOfFlight, boolean canFlight,
+	public Bunting(double weight, int age, Sex sex, int growth, int wingspan, int rangeOfFlight, boolean canFlight,
 			int eatGrown, int speed) {
 		super(weight, age, sex, growth, wingspan, rangeOfFlight, canFlight, eatGrown, speed);
 	}

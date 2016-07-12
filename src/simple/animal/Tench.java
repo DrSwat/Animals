@@ -9,7 +9,7 @@ import general.Predator;
 
 public class Tench extends FishOmnivorous implements Predator, JustEat {
 
-	public Tench(int weight, int age, Sex sex, int lenght, int speed, Fertilization fertilization, int eatFood) {
+	public Tench(double weight, int age, Sex sex, int lenght, int speed, Fertilization fertilization, int eatFood) {
 		super(weight, age, sex, lenght, speed, fertilization, eatFood);
 	}
 
@@ -30,7 +30,7 @@ public class Tench extends FishOmnivorous implements Predator, JustEat {
 	public boolean canKill(Animal animal) {
 		double weight = animal.getWeight() / getWeight();
 		double speed = getSpeed() - animal.getSpeed();
-		if (animal instanceof Fish || animal instanceof Insect && speed > 0 && weight > 3)
+		if ((animal instanceof Fish || animal instanceof Insect) && speed >= 0 && weight < 3)
 			return true;
 		else
 			return false;		

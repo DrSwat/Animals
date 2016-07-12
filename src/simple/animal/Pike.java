@@ -1,13 +1,13 @@
 package simple.animal;
 
 import general.Animal;
-import general.Bird;
+import general.Fish;
 import general.FishCarnivorous;
-import general.Mammal;
+import general.Insect;
 
 public class Pike extends FishCarnivorous {
 
-	public Pike(int weight, int lifetime, Sex sex, int lenght, int speed, Fertilization fertilization,
+	public Pike(double weight, int lifetime, Sex sex, int lenght, int speed, Fertilization fertilization,
 			int numberOfTeeth) {
 		super(weight, lifetime, sex, lenght, speed, fertilization, numberOfTeeth);
 
@@ -30,7 +30,7 @@ public class Pike extends FishCarnivorous {
 	public boolean canKill(Animal animal) {
 		double weight = animal.getWeight() / getWeight();
 		double speed = getSpeed() - animal.getSpeed();
-		if (animal instanceof Mammal || animal instanceof Bird && speed > 0 && weight > 3)
+		if ((animal instanceof Fish || animal instanceof Insect) && speed >= 0 && weight < 3)
 			return true;
 		else
 			return false;		

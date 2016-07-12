@@ -9,7 +9,7 @@ public abstract class Fish extends Animal {
 
 	private Fertilization fertilization;
 
-	public Fish(int weight, int age, Sex sex, int lenght, int speed, Fertilization fertilization) {
+	public Fish(double weight, int age, Sex sex, int lenght, int speed, Fertilization fertilization) {
 		super(weight, age, sex, speed);
 		this.lenght = lenght;
 		this.fertilization = fertilization;

@@ -8,7 +8,7 @@ import general.Predator;
 
 public class Thrush extends BirdOmnivorous implements Predator, JustEat {
 
-	public Thrush(int weight, int age, Sex sex, int growth, int wingspan, int rangeOfFlight, boolean canFlight,
+	public Thrush(double weight, int age, Sex sex, int growth, int wingspan, int rangeOfFlight, boolean canFlight,
 			int eatFood, int speed) {
 		super(weight, age, sex, growth, wingspan, rangeOfFlight, canFlight, eatFood, speed);
 	}
@@ -30,7 +30,7 @@ public class Thrush extends BirdOmnivorous implements Predator, JustEat {
 	public boolean canKill(Animal animal) {
 		double weight = animal.getWeight() / getWeight();
 		double speed = getSpeed() - animal.getSpeed();
-		if (animal instanceof Insect && speed > 0 && weight > 3)
+		if (animal instanceof Insect && speed >= 0 && weight < 3)
 			return true;
 		else
 			return false;		

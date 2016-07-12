@@ -5,7 +5,7 @@ import general.MammalHerbivorous;
 public class Cow extends MammalHerbivorous {
 	private int horn = 2;
 
-	public Cow(int weight, int age, Sex sex, int height, int lenght, int speed, int quatityOfStomach, int horn) {
+	public Cow(double weight, int age, Sex sex, int height, int lenght, int speed, int quatityOfStomach, int horn) {
 		super(weight, age, sex, height, lenght, speed, quatityOfStomach);
 		this.horn = horn;
 	}

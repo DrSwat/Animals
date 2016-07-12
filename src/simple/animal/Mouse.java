@@ -4,19 +4,17 @@ import general.JustEat;
 import general.MammalHerbivorous;
 import general.Run;
 
-public class Doe extends MammalHerbivorous implements Run, JustEat {
+public class Mouse extends MammalHerbivorous implements JustEat, Run {
 
-	public Doe(double weight, int age, Sex sex, int height, int lenght, int speed, int quatityOfStomach) {
+	public Mouse(double weight, int age, Sex sex, int height, int lenght, int speed, int quatityOfStomach) {
 		super(weight, age, sex, height, lenght, speed, quatityOfStomach);
+		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public boolean justRun() {
-		int i = (int) (Math.random() * 2);
-		if (i % 2 == 0)
-			return true;
-		else
-			return false;
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 	@Override
@@ -24,7 +22,5 @@ public class Doe extends MammalHerbivorous implements Run, JustEat {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
-	
 
 }
