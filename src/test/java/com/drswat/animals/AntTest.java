@@ -1,17 +1,11 @@
 package com.drswat.animals;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
-import com.drswat.animals.Ant;
-import com.drswat.animals.AntEater;
-import com.drswat.animals.Bunting;
-import com.drswat.animals.Carp;
-import com.drswat.animals.Eagle;
-import com.drswat.animals.Tiger;
 import com.drswat.animals.Animal.Sex;
 import com.drswat.animals.Fish.Fertilization;
 
@@ -29,12 +23,13 @@ public class AntTest {
 	Bunting bunting = new Bunting(0.150, 1, Sex.female, 1, 1, 50, true, 1, 1);
 	Tiger tiger = new Tiger(50, 20, Sex.female, 120, 200, 50, 40);
 
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
+	@Test
+	public void testCanKill() {
+		assertTrue(ant0.canKill(carp));
+		assertTrue(ant2.canKill(eagle));
+		assertTrue(ant3.canKill(bunting));
+		assertFalse(ant3.canKill(antEater));
+		assertFalse(ant4.canKill(tiger));
 	}
 
 	@Test
@@ -50,15 +45,6 @@ public class AntTest {
 		assertEquals(ant3.getWeight(), .000156, DELTA);
 		assertEquals(ant4.getWeight(), .00215, DELTA);
 
-	}
-
-	@Test
-	public void testCanKill() {
-		assertTrue(ant0.canKill(carp));
-		assertTrue(ant2.canKill(eagle));
-		assertTrue(ant3.canKill(bunting));
-		assertFalse(ant3.canKill(antEater));
-		assertFalse(ant4.canKill(tiger));
 	}
 
 }

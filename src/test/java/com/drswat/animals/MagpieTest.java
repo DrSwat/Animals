@@ -1,19 +1,15 @@
 package com.drswat.animals;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.drswat.animals.Ant;
-import com.drswat.animals.Magpie;
 import com.drswat.animals.Animal.Sex;
 
 public class MagpieTest {
-	
+
 	private static final double DELTA = 0.0001;
 	Magpie magpie0 = new Magpie(.005, 1, Sex.female, 10, 10, 50, true, 3, 10);
 	Magpie magpie1 = new Magpie(.005, 1, Sex.female, 10, 10, 50, true, 3, 10);
@@ -27,23 +23,6 @@ public class MagpieTest {
 	Ant ant3 = new Ant(.00150, 1, Sex.male, 4, 1, 2);
 	Ant ant4 = new Ant(.00150, 1, Sex.male, 4, 1, 1);
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
-
 	@Test
 	public void testCanKill() {
 		assertTrue(magpie0.canKill(ant0));
@@ -53,7 +32,6 @@ public class MagpieTest {
 		assertFalse(magpie4.canKill(ant4));
 
 	}
-	
 
 	@Test
 	public void testKill() {

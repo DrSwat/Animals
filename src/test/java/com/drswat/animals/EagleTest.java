@@ -1,16 +1,11 @@
 package com.drswat.animals;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.drswat.animals.Bunting;
-import com.drswat.animals.Eagle;
 import com.drswat.animals.Animal.Sex;
 
 public class EagleTest {
@@ -26,22 +21,6 @@ public class EagleTest {
 	Bunting bunting2 = new Bunting(.2, 1, Sex.male, 10, 10, 10, true, 1, 20);
 	Bunting bunting3 = new Bunting(.2, 1, Sex.male, 10, 10, 10, true, 1, 20);
 	Bunting bunting4 = new Bunting(.2, 1, Sex.male, 10, 10, 10, true, 1, 20);
-
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
 
 	@Test
 	public void testCanKill() {

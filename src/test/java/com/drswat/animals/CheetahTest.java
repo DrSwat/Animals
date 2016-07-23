@@ -1,13 +1,10 @@
 package com.drswat.animals;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.drswat.animals.Cheetah;
-import com.drswat.animals.Doe;
 import com.drswat.animals.Animal.Sex;
 
 public class CheetahTest {
@@ -23,29 +20,19 @@ public class CheetahTest {
 	Doe dou3 = new Doe(40, 3, Sex.male, 150, 150, 30, 2);
 	Doe dou4 = new Doe(40, 3, Sex.male, 150, 150, 30, 2);
 
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-
-
 	@Test
 	public void testCanKill() {
 
 		assertTrue(ch0.canKill(dou0));
 		assertTrue(ch1.canKill(dou1));
 	}
+
 	@Test
 	public void testCanKillNegative() {
 		assertFalse(chN2.canKill(dou2));
 		assertFalse(chN3.canKill(dou3));
 		assertFalse(chN4.canKill(dou4));
 	}
-
 
 	@Test
 	public void testKill() {
@@ -54,12 +41,12 @@ public class CheetahTest {
 		chN2.kill(dou2);
 		chN3.kill(dou3);
 		chN4.kill(dou4);
-		 assertTrue(ch0.getWeight() == 40.16);
-		 assertTrue(ch1.getWeight() == 100.16);
-		 assertTrue(chN2.getWeight() == 40.16);
-		 assertTrue(chN3.getWeight() == 5.16);
-		 assertTrue(chN4.getWeight() == 5.16);
+		assertTrue(ch0.getWeight() == 40.16);
+		assertTrue(ch1.getWeight() == 100.16);
+		assertTrue(chN2.getWeight() == 40.16);
+		assertTrue(chN3.getWeight() == 5.16);
+		assertTrue(chN4.getWeight() == 5.16);
 
 	}
-	
+
 }

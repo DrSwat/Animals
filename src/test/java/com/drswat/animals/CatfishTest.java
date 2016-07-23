@@ -1,15 +1,11 @@
 package com.drswat.animals;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.drswat.animals.Carp;
-import com.drswat.animals.Catfish;
 import com.drswat.animals.Animal.Sex;
 import com.drswat.animals.Fish.Fertilization;
 
@@ -21,28 +17,11 @@ public class CatfishTest {
 	Catfish catfish3 = new Catfish(.150, 1, Sex.female, 300, 10, Fertilization.outside, 60);
 	Catfish catfish4 = new Catfish(1, 1, Sex.female, 300, 10, Fertilization.outside, 1);
 
-	
-	
 	Carp carp0 = new Carp(.200, 1, Sex.male, 1, 1, Fertilization.outside, 1);
 	Catfish catfish = new Catfish(.150, 1, Sex.female, 300, 10, Fertilization.outside, 1);
 	Carp carp1 = new Carp(1, 1, Sex.male, 1, 1, Fertilization.outside, 1);
-	Carp carp2 = new Carp(10, 1, Sex.male, 1, 1, Fertilization.outside,1);
+	Carp carp2 = new Carp(10, 1, Sex.male, 1, 1, Fertilization.outside, 1);
 	Carp carp3 = new Carp(.150, 1, Sex.male, 1, 15, Fertilization.outside, 1);
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
 
 	@Test
 	public void testCanKill() {
@@ -65,7 +44,7 @@ public class CatfishTest {
 		assertEquals(3.004, catfish2.getWeight(), DELTA);
 		assertEquals(.19, catfish3.getWeight(), DELTA);
 		assertEquals(1.0006, catfish4.getWeight(), DELTA);
-		
+
 	}
 
 }

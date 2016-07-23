@@ -1,15 +1,11 @@
 package com.drswat.animals;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.drswat.animals.Mouse;
-import com.drswat.animals.Owl;
 import com.drswat.animals.Animal.Sex;
 
 public class OwlTest {
@@ -25,21 +21,6 @@ public class OwlTest {
 	Mouse mouse2 = new Mouse(.2, 1, Sex.female, 8, 15, 10, 1);
 	Mouse mouse3 = new Mouse(.2, 1, Sex.female, 8, 15, 10, 1);
 	Mouse mouse4 = new Mouse(.2, 1, Sex.female, 8, 15, 10, 1);
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
 
 	@Test
 	public void testCanKill() {
@@ -57,7 +38,7 @@ public class OwlTest {
 		owl2.kill(mouse2);
 		owl3.kill(mouse3);
 		owl4.kill(mouse4);
-		
+
 		assertEquals(1.0008, owl0.getWeight(), DELTA);
 		assertEquals(.5008, owl1.getWeight(), DELTA);
 		assertEquals(1.5008, owl2.getWeight(), DELTA);

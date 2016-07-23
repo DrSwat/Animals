@@ -1,18 +1,11 @@
 package com.drswat.animals;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.drswat.animals.Ant;
-import com.drswat.animals.Carp;
-import com.drswat.animals.Cockroach;
-import com.drswat.animals.Locust;
-import com.drswat.animals.Mantis;
 import com.drswat.animals.Animal.Sex;
 import com.drswat.animals.Fish.Fertilization;
 import com.drswat.animals.InsectCarnivorous.Weapon;
@@ -20,34 +13,17 @@ import com.drswat.animals.InsectHerbivorous.Mouth;
 
 public class CarpTest {
 	private static final double DELTA = 0.00000001;
-Carp carp0 = new Carp(3, 2, Sex.female, 400, 10, Fertilization.outside, 10);
-Carp carp1= new Carp(1, 2, Sex.female, 400, 10, Fertilization.outside, 10);
-Carp carp2 = new Carp(2, 2, Sex.female, 400, 10, Fertilization.outside, 10);
-Carp carp3 = new Carp(.001, 2, Sex.female, 400, 10, Fertilization.outside, 1);
-Carp carp4 = new Carp(3, 2, Sex.female, 400, 10, Fertilization.outside, 1);
+	Carp carp0 = new Carp(3, 2, Sex.female, 400, 10, Fertilization.outside, 10);
+	Carp carp1 = new Carp(1, 2, Sex.female, 400, 10, Fertilization.outside, 10);
+	Carp carp2 = new Carp(2, 2, Sex.female, 400, 10, Fertilization.outside, 10);
+	Carp carp3 = new Carp(.001, 2, Sex.female, 400, 10, Fertilization.outside, 1);
+	Carp carp4 = new Carp(3, 2, Sex.female, 400, 10, Fertilization.outside, 1);
 
-
-Mantis mantis = new Mantis(.001, 1, Sex.female, 6, Weapon.sting, 1);
-Cockroach cockroach = new Cockroach(.0001, 1, Sex.female, 8, 1, 1);
-Ant ant = new Ant(.00150, 1, Sex.male, 6, 1, 1);
-Locust locust = new Locust(.001, 1, Sex.female, 6, Mouth.antennae, 20);
-Carp carp = new Carp(10, 1, Sex.male, 1, 1, Fertilization.outside, 1);
-
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
+	Mantis mantis = new Mantis(.001, 1, Sex.female, 6, Weapon.sting, 1);
+	Cockroach cockroach = new Cockroach(.0001, 1, Sex.female, 8, 1, 1);
+	Ant ant = new Ant(.00150, 1, Sex.male, 6, 1, 1);
+	Locust locust = new Locust(.001, 1, Sex.female, 6, Mouth.antennae, 20);
+	Carp carp = new Carp(10, 1, Sex.male, 1, 1, Fertilization.outside, 1);
 
 	@Test
 	public void testCanKill() {

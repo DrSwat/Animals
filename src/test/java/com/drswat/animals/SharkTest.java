@@ -1,15 +1,10 @@
 package com.drswat.animals;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.drswat.animals.Doe;
-import com.drswat.animals.Shark;
 import com.drswat.animals.Animal.Sex;
 import com.drswat.animals.Fish.Fertilization;
 
@@ -25,22 +20,6 @@ public class SharkTest {
 	Doe dou2 = new Doe(40, 3, Sex.male, 150, 150, 30, 2);
 	Doe dou3 = new Doe(40, 3, Sex.male, 150, 150, 30, 2);
 	Doe dou4 = new Doe(40, 3, Sex.male, 150, 150, 30, 2);
-
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
 
 	@Test
 	public void testCanKill() {
@@ -58,12 +37,12 @@ public class SharkTest {
 		shark2.kill(dou2);
 		shark3.kill(dou3);
 		shark4.kill(dou4);
-		
+
 		assertTrue(shark0.getWeight() == 40.16);
-		 assertTrue(shark1.getWeight() == 60.16);
-		 assertTrue(shark2.getWeight() == 30.16);
-		 assertTrue(shark3.getWeight() == 10.16);
-		 assertTrue(shark4.getWeight() == 40.16);
+		assertTrue(shark1.getWeight() == 60.16);
+		assertTrue(shark2.getWeight() == 30.16);
+		assertTrue(shark3.getWeight() == 10.16);
+		assertTrue(shark4.getWeight() == 40.16);
 	}
 
 }

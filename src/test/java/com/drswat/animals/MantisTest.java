@@ -1,15 +1,11 @@
 package com.drswat.animals;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.drswat.animals.Ant;
-import com.drswat.animals.Magpie;
 import com.drswat.animals.Animal.Sex;
 
 public class MantisTest {
@@ -25,21 +21,6 @@ public class MantisTest {
 	Ant ant2 = new Ant(.00150, 1, Sex.male, 4, 1, 1);
 	Ant ant3 = new Ant(.00150, 1, Sex.male, 4, 1, 2);
 	Ant ant4 = new Ant(.00150, 1, Sex.male, 4, 1, 1);
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
 
 	@Test
 	public void testCanKill() {
@@ -57,7 +38,7 @@ public class MantisTest {
 		mantis2.kill(ant2);
 		mantis3.kill(ant3);
 		mantis4.kill(ant4);
-		
+
 		assertEquals(.00501, mantis0.getWeight(), DELTA);
 		assertEquals(.00502, mantis1.getWeight(), DELTA);
 		assertEquals(.00501, mantis2.getWeight(), DELTA);

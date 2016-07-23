@@ -1,15 +1,11 @@
 package com.drswat.animals;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import com.drswat.animals.Bunting;
-import com.drswat.animals.Falcon;
 import com.drswat.animals.Animal.Sex;
 
 public class FalconTest {
@@ -25,21 +21,6 @@ public class FalconTest {
 	Bunting bunting2 = new Bunting(.2, 1, Sex.male, 10, 10, 10, true, 1, 20);
 	Bunting bunting3 = new Bunting(.2, 1, Sex.male, 10, 10, 10, true, 1, 20);
 	Bunting bunting4 = new Bunting(.2, 1, Sex.male, 10, 10, 10, true, 1, 20);
-	@BeforeClass
-	public static void setUpBeforeClass() throws Exception {
-	}
-
-	@AfterClass
-	public static void tearDownAfterClass() throws Exception {
-	}
-
-	@Before
-	public void setUp() throws Exception {
-	}
-
-	@After
-	public void tearDown() throws Exception {
-	}
 
 	@Test
 	public void testCanKill() {
@@ -48,7 +29,7 @@ public class FalconTest {
 		assertTrue(falcon2.canKill(bunting2));
 		assertFalse(falcon3.canKill(bunting3));
 		assertFalse(falcon4.canKill(bunting4));
-		
+
 	}
 
 	@Test
@@ -58,7 +39,7 @@ public class FalconTest {
 		falcon2.kill(bunting2);
 		falcon3.kill(bunting3);
 		falcon4.kill(bunting4);
-		
+
 		assertEquals(1.0008, falcon0.getWeight(), DELTA);
 		assertEquals(.5008, falcon1.getWeight(), DELTA);
 		assertEquals(1.5008, falcon2.getWeight(), DELTA);
